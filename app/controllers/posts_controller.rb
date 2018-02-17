@@ -1,4 +1,4 @@
-class PostController < ApplicationController
+class PostsController < ApplicationController
   before_action:authenticate_user!
   def index
 	if user_signed_in?
@@ -7,5 +7,11 @@ class PostController < ApplicationController
       		redirect_to new_user_session_path
     end
     end
+  end
+  
+  def new
+  end
+
+  def create
   end
 end
